@@ -7,8 +7,8 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/project
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.2535222999678133 -0.5694451594653115 -0.7819582174135367 5.2480158298175095
-  position -0.4983086385062233 -0.5983971265947214 0.5704732248238839
+  orientation 0.01811589115682665 0.02992421773098783 -0.9993879905626155 1.0892925127687931
+  position -0.2590380145701958 0.3347206379509487 0.07077387509676712
 }
 TexturedBackground {
 }
@@ -17,7 +17,32 @@ TexturedBackgroundLight {
 RectangleArena {
 }
 Robot {
+  translation 0 0 0.01
   children [
+    BallJoint {
+      jointParameters BallJointParameters {
+        anchor 0.00422885 -0.0375647 0.001
+      }
+      jointParameters2 JointParameters {
+      }
+      jointParameters3 JointParameters {
+      }
+      endPoint Solid {
+        translation 0.00422885 -0.0375647 0.001
+        rotation 0.19366103500055568 -0.3515240635313012 -0.9159291655368088 0.32800999999999997
+        children [
+          DEF ballsocket Shape {
+            geometry Sphere {
+              radius 0.01
+            }
+          }
+        ]
+        name "solid(2)"
+        boundingObject USE ballsocket
+        physics Physics {
+        }
+      }
+    }
     DEF BODY Pose {
       translation 0 0 0.06
       children [
@@ -33,7 +58,7 @@ Robot {
     }
     HingeJoint {
       jointParameters HingeJointParameters {
-        anchor 0.055 0 0.025
+        anchor 0.054992 0.025 0.015008
       }
       device [
         DEF motor1 RotationalMotor {
@@ -41,7 +66,7 @@ Robot {
         }
       ]
       endPoint Solid {
-        translation 0.055 0 0.025008
+        translation 0.054992 0.025 0.015008
         rotation 0 1 0 1.57
         children [
           DEF wheel Shape {
@@ -62,7 +87,7 @@ Robot {
     }
     HingeJoint {
       jointParameters HingeJointParameters {
-        anchor 0.055 0 0.025
+        anchor -0.054992 0.025 0.015008
       }
       device [
         RotationalMotor {
@@ -70,7 +95,7 @@ Robot {
         }
       ]
       endPoint Solid {
-        translation -0.055 0 0.025008
+        translation -0.054992 0.025 0.015008
         rotation 0 1 0 1.57
         children [
           USE wheel
@@ -84,4 +109,8 @@ Robot {
   boundingObject USE BODY
   physics Physics {
   }
+  controller "basic_controller"
+  controllerArgs [
+    ""
+  ]
 }

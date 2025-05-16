@@ -10,6 +10,8 @@
 #include <webots/Robot.hpp>
 #include <webots/DistanceSensor.hpp>
 #include <webots/Motor.hpp>
+#include <cmath>
+
 
 #define TIME_STEP 64
 
@@ -27,8 +29,16 @@ using namespace webots;
 int main(int argc, char **argv) {
   // create the Robot instance.
   Robot *robot = new Robot();
-  Motor *motor1 = robot->getMotor("motor1");
-  Motor *motor2 = robot->getMotor("motor1");
+  Motor *left_motor = robot->getMotor("motor1");
+  Motor *right_motor = robot->getMotor("motor2");
+
+  left_motor->setPosition(INFINITY);
+  right_motor->setPosition(INFINITY);
+
+  left_motor->setVelocity(0.0);
+  right_motor->setVelocity(0.0);
+
+
 
   // get the time step of the current world.
   int timeStep = (int)robot->getBasicTimeStep();
@@ -42,6 +52,8 @@ int main(int argc, char **argv) {
   // Main loop:
   // - perform simulation steps until Webots is stopping the controller
   while (robot->step(timeStep) != -1) {
+    left_motor->setVelocity(-3.28);
+    right_motor->setVelocity(6.28);
     // Read the sensors:
     // Enter here functions to read sensor data, like:
     //  double val = ds->getValue();
