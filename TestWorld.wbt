@@ -1,0 +1,529 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.5494840893415686 0.47321837925747245 0.6885721466145709 2.0710822090673755
+  position -0.3894751454475614 -1.133152145288112 3.7943227641398836
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 3 3
+  floorAppearance PBRAppearance {
+    metalness 0
+  }
+}
+Robot {
+  translation -0.0408076 -0.183141 -0.033803
+  rotation -0.00482238206272586 -0.0052692101019398765 0.9999744897026837 1.5293676137174053
+  children [
+    DistanceSensor {
+      translation 0.0395 -0.009 0.0853
+      rotation -1 9.30993e-07 -6.99915e-07 3.14159
+      children [
+        DEF Ultrasonic1 Shape {
+          appearance PBRAppearance {
+            transparency 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.1 0.01 0.01
+          }
+          castShadows FALSE
+        }
+        Transform {
+          rotation 0 1 0 1.5708
+          scale 0.01 0.01 0.01
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0.333333 1
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "../Webots Sim/Ultrasonic sensor model/Ultrasonic sensor.obj"
+                ]
+              }
+              castShadows FALSE
+            }
+          ]
+          translationStep 0.005
+        }
+      ]
+      name "U1"
+      boundingObject USE Ultrasonic1
+      physics Physics {
+      }
+      translationStep 0.001
+      numberOfRays 2
+      aperture 0.5236
+      redColorSensitivity 0
+    }
+    DistanceSensor {
+      translation -0.0395 -0.00899999 0.0853
+      rotation -9.45382e-07 1 -9.26202e-07 3.14159
+      children [
+        DEF Ultrasonic2 Shape {
+          appearance PBRAppearance {
+            transparency 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.1 0.01 0.01
+          }
+          castShadows FALSE
+        }
+        Transform {
+          rotation 0 1 0 1.5708
+          scale 0.01 0.01 0.01
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0.333333 1
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "../Webots Sim/Ultrasonic sensor model/Ultrasonic sensor.obj"
+                ]
+              }
+              castShadows FALSE
+            }
+          ]
+          translationStep 0.005
+        }
+      ]
+      name "U2"
+      boundingObject USE Ultrasonic2
+      physics Physics {
+      }
+      translationStep 0.001
+      numberOfRays 2
+      aperture 0.5236
+      redColorSensitivity 0
+    }
+    DistanceSensor {
+      translation 0 -0.055 0.0853
+      rotation -0.7071077811843443 0.7071057811849633 -1.8320294330755053e-06 3.14159
+      children [
+        DEF Ultrasonic3 Shape {
+          appearance PBRAppearance {
+            transparency 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.1 0.01 0.01
+          }
+          castShadows FALSE
+        }
+        Transform {
+          rotation 0 1 0 1.5708
+          scale 0.01 0.01 0.01
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0.333333 1
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "../Webots Sim/Ultrasonic sensor model/Ultrasonic sensor.obj"
+                ]
+              }
+              castShadows FALSE
+            }
+          ]
+          translationStep 0.005
+        }
+      ]
+      name "U3"
+      boundingObject USE Ultrasonic3
+      physics Physics {
+      }
+      translationStep 0.001
+      numberOfRays 2
+      aperture 0.5236
+      redColorSensitivity 0
+    }
+    DistanceSensor {
+      translation 0.0328 -0.0422 0.0853
+      rotation -0.9238792538370356 0.38268410514295936 -6.74081185204689e-07 -3.1415853071795863
+      children [
+        DEF Ultrasonic4 Shape {
+          appearance PBRAppearance {
+            transparency 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.1 0.01 0.01
+          }
+          castShadows FALSE
+        }
+        Transform {
+          rotation 0 1 0 1.5708
+          scale 0.01 0.01 0.01
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0.333333 1
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "../Webots Sim/Ultrasonic sensor model/Ultrasonic sensor.obj"
+                ]
+              }
+              castShadows FALSE
+            }
+          ]
+          translationStep 0.005
+        }
+      ]
+      name "U4"
+      boundingObject USE Ultrasonic4
+      physics Physics {
+      }
+      translationStep 0.001
+      numberOfRays 2
+      aperture 0.5236
+      redColorSensitivity 0
+    }
+    DistanceSensor {
+      translation -0.0328 -0.0422219 0.0853
+      rotation -0.38268495869544833 0.9238789002824571 -1.0679698847302036e-06 -3.1415853071795863
+      children [
+        DEF Ultrasonic5 Shape {
+          appearance PBRAppearance {
+            transparency 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.1 0.01 0.01
+          }
+          castShadows FALSE
+        }
+        Transform {
+          rotation 0 1 0 1.5708
+          scale 0.01 0.01 0.01
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0.333333 1
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "../Webots Sim/Ultrasonic sensor model/Ultrasonic sensor.obj"
+                ]
+              }
+              castShadows FALSE
+            }
+          ]
+          translationStep 0.005
+        }
+      ]
+      name "U5"
+      boundingObject USE Ultrasonic5
+      physics Physics {
+      }
+      translationStep 0.001
+      numberOfRays 2
+      aperture 0.5236
+      redColorSensitivity 0
+    }
+    BallJoint {
+      jointParameters BallJointParameters {
+        position 1982.8004628397803
+        anchor 0.00189 -0.049 0.049158
+      }
+      jointParameters2 JointParameters {
+        position -1.303033186433124
+      }
+      jointParameters3 JointParameters {
+        position -576.9917341091058
+      }
+      endPoint Solid {
+        translation 0.002059832492445346 -0.04911445047893751 0.04912298623410513
+        rotation -0.2974304351064341 -0.09270341281035872 -0.9502321892704485 2.9279947119056415
+        children [
+          DEF ballsocket Shape {
+            appearance PBRAppearance {
+              baseColor 0.666667 1 1
+              roughness 1
+            }
+            geometry Sphere {
+              radius 0.008
+            }
+          }
+        ]
+        name "solid(2)"
+        boundingObject USE ballsocket
+        physics Physics {
+        }
+        translationStep 0.002
+      }
+    }
+    DEF BODY Pose {
+      translation 0 0 0.06
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.333333 1 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.1098 0.1465 0.004
+          }
+        }
+      ]
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 2400.0766868974038
+        anchor 0.049964 0.025 0.063996
+      }
+      device [
+        DEF motor1 RotationalMotor {
+          name "motor1"
+        }
+      ]
+      endPoint Solid {
+        translation 0.05000461287856672 0.024967230088852668 0.06387371304635057
+        rotation 0.050750455739343524 -0.9974961871574737 0.049251881675233436 4.71134336808999
+        children [
+          DEF wheel Shape {
+            appearance PBRAppearance {
+              baseColor 0 0 0
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.018
+              radius 0.022
+            }
+          }
+        ]
+        boundingObject USE wheel
+        physics DEF wheel_physics Physics {
+        }
+        translationStep 0.005
+        rotationStep 0.0174533
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 1859.861420966628
+        anchor -0.0500318 0.0250011 0.0640158
+      }
+      device [
+        RotationalMotor {
+          name "motor2"
+        }
+      ]
+      endPoint Solid {
+        translation -0.05017732331045921 0.025115293018199054 0.06402723960577827
+        rotation 0.01726399298119155 0.999618042088847 0.021580650518593838 1.5602102371830064
+        children [
+          USE wheel
+        ]
+        name "solid(1)"
+        boundingObject USE wheel
+        physics USE wheel_physics
+        translationStep 0.005
+        rotationStep 0.0174533
+      }
+    }
+    Solid {
+      translation 0.00177606 -0.049171 0.0520133
+      children [
+        Shape {
+          appearance PBRAppearance {
+          }
+          geometry Cylinder {
+            height 0.0115
+            radius 0.010875
+          }
+          castShadows FALSE
+        }
+      ]
+      name "solid(3)"
+      translationStep 0.001
+    }
+  ]
+  boundingObject USE BODY
+  physics Physics {
+  }
+  controller "Ultrasonic_Main"
+  controllerArgs [
+    ""
+  ]
+}
+Solid {
+  translation -1.2492506134065888 0.0001409734307813312 0.098038
+  rotation 8.607241173277758e-13 7.601320654380022e-15 -1 0.0001463906042900573
+  children [
+    DEF Wall Shape {
+      appearance PBRAppearance {
+      }
+      geometry Box {
+        size 0.5 0.05 0.2
+      }
+    }
+  ]
+  boundingObject USE Wall
+  physics Physics {
+  }
+  linearVelocity 2.2093406259822793e-17 -6.092983450963343e-17 9.094947017729284e-17
+  angularVelocity 5.013590466031053e-16 2.35151513112591e-16 -5.399931209443193e-18
+}
+Solid {
+  translation -1.220000001779286 -0.7904117272517318 0.098038
+  rotation -5.8950354075506475e-09 8.805607827509295e-10 1 2.5904909105499635e-08
+  children [
+    DEF Wall Shape {
+      appearance PBRAppearance {
+      }
+      geometry Box {
+        size 0.5 0.05 0.2
+      }
+    }
+  ]
+  name "solid(1)"
+  boundingObject USE Wall
+  physics Physics {
+  }
+  linearVelocity -2.346447686347153e-17 2.851822867674478e-17 4.547473508864639e-17
+  angularVelocity -6.018715115622817e-16 -1.1760708681159618e-16 2.2863139419443402e-17
+}
+Solid {
+  translation -0.9669391309802573 0.6399079261062129 0.09803831775809121
+  rotation 7.286573410771407e-05 7.327892005230287e-05 0.9999999946603922 1.5761100967803872
+  children [
+    DEF Wall Shape {
+      appearance PBRAppearance {
+      }
+      geometry Box {
+        size 0.5 0.05 0.2
+      }
+    }
+  ]
+  name "solid(2)"
+  boundingObject USE Wall
+  physics Physics {
+  }
+  linearVelocity 1.4131782440472992e-08 6.679420967411882e-09 -1.0213976293017145e-08
+  angularVelocity 2.6010946563209405e-08 -4.743382131936509e-06 3.509240621777919e-08
+}
+Solid {
+  translation -1.2418952988731202 0.6098818704457821 0.09803768115218055
+  rotation -0.2324055037583646 0.005179219785846923 0.9726051909717687 7.728528992289299e-05
+  children [
+    DEF Wall Shape {
+      appearance PBRAppearance {
+      }
+      geometry Box {
+        size 0.5 0.05 0.2
+      }
+    }
+  ]
+  name "solid(3)"
+  boundingObject USE Wall
+  physics Physics {
+  }
+  linearVelocity -4.897467496355136e-07 -6.71979747528453e-08 1.0284560539729508e-08
+  angularVelocity 5.791795589413296e-07 -1.2762818135962727e-08 1.5684743739994288e-07
+}
+Solid {
+  translation -0.9511505796135937 -0.4099248798888419 0.098038
+  rotation -1.5216449787438383e-11 1.1460905373502207e-12 1 1.7482474916369614e-05
+  children [
+    DEF Wall Shape {
+      appearance PBRAppearance {
+      }
+      geometry Box {
+        size 0.5 0.05 0.2
+      }
+    }
+  ]
+  name "solid(4)"
+  boundingObject USE Wall
+  physics Physics {
+  }
+  linearVelocity -2.1155131004891675e-17 -1.4757616905398533e-16 9.895707397303728e-24
+  angularVelocity 1.38783882745556e-15 -1.3944227264492969e-16 -3.7797777739267643e-17
+}
+Solid {
+  translation -0.675345 -0.168149 0.097152
+  rotation 0.7070992811437907 -0.7071142811497547 -5.08581202212689e-09 3.14159
+  children [
+    DEF Wall Shape {
+      appearance PBRAppearance {
+      }
+      geometry Box {
+        size 2 0.05 0.2
+      }
+    }
+  ]
+  name "solid(5)"
+  boundingObject USE Wall
+}
+Solid {
+  translation 0.747502 -0.168367 0.097152
+  rotation 7.18995e-09 -7.19234e-09 1 -1.571125307179586
+  children [
+    DEF Wall Shape {
+      appearance PBRAppearance {
+      }
+      geometry Box {
+        size 2 0.05 0.2
+      }
+    }
+  ]
+  name "solid(8)"
+  boundingObject USE Wall
+}
+Solid {
+  translation -0.900503523356946 -1.1918776857877604 0.09803833150638847
+  rotation 0.03215859672953659 -0.0002717850963500599 -0.9994827416165065 0.006246924155213831
+  children [
+    DEF Wall Shape {
+      appearance PBRAppearance {
+      }
+      geometry Box {
+        size 0.5 0.05 0.2
+      }
+    }
+  ]
+  name "solid(6)"
+  boundingObject USE Wall
+  physics Physics {
+  }
+  linearVelocity -8.829816187573222e-09 -1.428457005446472e-07 -8.597629084744592e-09
+  angularVelocity -5.343588567046389e-06 6.131130604115947e-08 -2.1414715844973096e-06
+}
+Solid {
+  translation 1.249941647895665 0.0014435049166959758 0.09803803310765993
+  rotation 0.005574940889530967 -0.0006981354046102908 0.9999842161959533 0.0025239270927334798
+  children [
+    DEF Wall Shape {
+      appearance PBRAppearance {
+      }
+      geometry Box {
+        size 0.5 0.05 0.2
+      }
+    }
+  ]
+  name "solid(7)"
+  boundingObject USE Wall
+  physics Physics {
+  }
+  linearVelocity -1.2012980508640073e-07 4.180860990308019e-08 -1.0858563656433358e-09
+  angularVelocity -4.2866194486452565e-07 5.391545111628138e-08 -5.264832602776493e-08
+}
