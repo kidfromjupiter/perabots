@@ -7,8 +7,8 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/project
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.5638988724864836 0.4807427495640455 0.6714942072349351 2.101733895874421
-  position -0.41002551838115625 -0.9443122319425641 3.837508084797422
+  orientation -0.5351004309328821 0.45676910896797884 0.7106542829731222 2.0510457848327985
+  position -0.28489493985223646 -1.9004733601664001 3.829418525396215
 }
 TexturedBackground {
 }
@@ -21,8 +21,8 @@ RectangleArena {
   }
 }
 Robot {
-  translation -1.09593 -1.01021 -0.0444281
-  rotation -0.00482238206272586 -0.0052692101019398765 0.9999744897026837 1.5293676137174053
+  translation 0.120374 -0.640157 -0.0323154
+  rotation -0.004941008859649081 -0.00021877494950824382 0.9999877692096891 3.10014
   children [
     Compass {
     }
@@ -402,6 +402,7 @@ Solid {
   children [
     DEF Wall Shape {
       appearance PBRAppearance {
+        roughness 0.5
       }
       geometry Box {
         size 0.5 0.05 0.2
@@ -418,6 +419,7 @@ Solid {
   children [
     DEF Wall Shape {
       appearance PBRAppearance {
+        roughness 0.5
       }
       geometry Box {
         size 0.5 0.05 0.2
@@ -435,6 +437,7 @@ Solid {
   children [
     DEF Wall Shape {
       appearance PBRAppearance {
+        roughness 0.5
       }
       geometry Box {
         size 0.5 0.05 0.2
@@ -452,6 +455,7 @@ Solid {
   children [
     DEF Wall Shape {
       appearance PBRAppearance {
+        roughness 0.5
       }
       geometry Box {
         size 0.5 0.05 0.2
@@ -469,6 +473,7 @@ Solid {
   children [
     DEF Wall Shape {
       appearance PBRAppearance {
+        roughness 0.5
       }
       geometry Box {
         size 0.5 0.05 0.2
@@ -486,6 +491,7 @@ Solid {
   children [
     DEF Wall Shape {
       appearance PBRAppearance {
+        roughness 0.5
       }
       geometry Box {
         size 2 0.05 0.2
@@ -493,6 +499,38 @@ Solid {
     }
   ]
   name "solid(5)"
+  boundingObject USE Wall
+}
+Solid {
+  translation -0.175345 -0.168157 0.0971512
+  rotation 0.7070992811437907 -0.7071142811497547 -5.08581202212689e-09 3.14159
+  children [
+    DEF Wall Shape {
+      appearance PBRAppearance {
+        roughness 0.5
+      }
+      geometry Box {
+        size 2 0.05 0.2
+      }
+    }
+  ]
+  name "solid(9)"
+  boundingObject USE Wall
+}
+Solid {
+  translation 0.344655 -0.168149 0.097152
+  rotation 0.7070992811437907 -0.7071142811497547 -5.08581202212689e-09 3.14159
+  children [
+    DEF Wall Shape {
+      appearance PBRAppearance {
+        roughness 0.5
+      }
+      geometry Box {
+        size 2 0.05 0.2
+      }
+    }
+  ]
+  name "solid(10)"
   boundingObject USE Wall
 }
 Solid {
@@ -516,6 +554,7 @@ Solid {
   children [
     DEF Wall Shape {
       appearance PBRAppearance {
+        roughness 0.5
       }
       geometry Box {
         size 0.5 0.05 0.2
